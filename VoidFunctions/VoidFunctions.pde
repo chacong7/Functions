@@ -4,7 +4,8 @@ void setup () {
 }
 void draw () {
   drawABlueSquare(width/2-50, height/2-50);
-  drawACircleAtMouse(123,2,255);
+  drawACircleAtMouse(123,212,1);
+  drawARandomTriangle();
 }
 void drawARandomCircle () {
   fill(random(255),random(255),random(255));
@@ -22,4 +23,8 @@ void drawABlueSquare (int x, int y) {
 void drawACircleAtMouse (int x, int y, int z) {
   fill(x,y,z);
   ellipse(mouseX,mouseY,30,30);
+}
+void drawARandomTriangle() {
+  fill(random(255),random(255),random(255));
+  triangle(random(width),random(height),random(width),random(height),random(width),random(height));
 }
